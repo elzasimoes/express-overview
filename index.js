@@ -15,7 +15,9 @@ app.get('/teste', (req, res, next) => {
         data: [
             { id: 7, name: 'Ana', Position: 1 },
             { id: 3, name: 'Joana', Position: 2 },
-            { id: 4, name: 'Maria', Position: 3 }
+            { id: 4, name: 'Maria', Position: 3 },
+            { id: 5, name: 'Lara', Position: 4 },
+            { id: 5, name: 'Rayane', Position: 4 }
         ],
         count: 3,
         skip: 0,
@@ -26,7 +28,7 @@ app.get('/teste', (req, res, next) => {
 })
 
 app.use('/teste', (req, res) => {
-    console.log('Depois ')
+    console.log('Depoisss ')
 })
 
 // Startar Express

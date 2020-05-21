@@ -30,3 +30,10 @@
     "production": "pm2 start index.js --name appx-backend" }
 
 
+### Node-dev instead Nodemon :alien:
+
+[Node-dev Doc](https://www.npmjs.com/package/node-dev "Node-dev Doc")
+
+`npm install -g node-dev`
+`npm install  node-dev --save`
+`npx node-dev index.js`
