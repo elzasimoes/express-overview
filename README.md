@@ -10,12 +10,12 @@
 `npm i --save-dev nodemon`
 `npm start`
 
-** [Issue Nodemon](Issue: https://github.com/remy/nodemon/issues/1544 "Issue Nodemon")**
+[Issue Nodemon](Issue: https://github.com/remy/nodemon/issues/1544 "Issue Nodemon")
 
 `> [nodemon] restarting due to changes...`
 
 ### PM2 Production
-** [PM2 Doc](https://pm2.keymetrics.io/ "PM2 Doc")** :alien:
+[PM2 Doc](https://pm2.keymetrics.io/ "PM2 Doc")
 
 `npm i --save pm2`
 `npm run production`
