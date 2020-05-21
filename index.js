@@ -1,7 +1,14 @@
 const express = require('express')
 const saudacao = require('./middleware')
+const bodyParser = require('body-parser')
+
 const app = express()
 
+
+//Qualquer texto do orpo da requisição será interpretrado
+app.use(bodyParser.text())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(saudacao('Elza'))
 
 
@@ -17,17 +24,20 @@ app.post('/clientes/relatorio', (req, res) => {
 })
 
 app.post('/corpo', (req, res) => {
-    let corpo = ''
-    req.on('data', function(parte) {
-        corpo += parte
+    // let corpo = ''
+    // req.on('data', function(parte) {
+    //     corpo += parte
+    // req.on('end', function() {
+    //     res.send(corpo)
 
-    })
+    //     })
+    //     })
 
-    req.on('end', function() {
-        res.send(corpo)
+    res.send(req.body)
 
-    })
 })
+
+
 
 // : Significa que essa parte pode mudar na URL, que vai ser acessado como parametro
 app.get('/clientes/:id', (req, res) => {

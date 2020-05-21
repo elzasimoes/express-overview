@@ -37,3 +37,9 @@
 `npm install -g node-dev`
 `npm install  node-dev --save`
 `npx node-dev index.js`
+
+### Body-parser :alien:
+
+[Body-parser Doc](https://www.npmjs.com/package/body-parser "Body-parser Doc")
+
+`npm i --save body-parser`
