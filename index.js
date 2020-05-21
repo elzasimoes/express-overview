@@ -1,9 +1,11 @@
 const express = require('express')
+const app = express()
+
 const saudacao = require('./middleware')
 const bodyParser = require('body-parser')
 const usuarioApi = require('./api/usuario')
 
-const app = express()
+require('./api/produto')(app, 'com param!')
 
 
 app.post('/usuario', usuarioApi.salvar)
