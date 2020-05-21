@@ -1,5 +1,8 @@
 const express = require('express')
+const saudacao = require('./middleware')
 const app = express()
+
+app.use(saudacao('Elza'))
 
 
 // Função Middleware
@@ -28,10 +31,10 @@ app.get('/teste', (req, res, next) => {
 })
 
 app.use('/teste', (req, res) => {
-    console.log('Depoisss ')
+    console.log('Depois ')
 })
 
 // Startar Express
 app.listen(3000, () => {
-    console.log('Servidor rodando ...')
+    console.log('Backend rodando ...')
 })
