@@ -1,0 +1,29 @@
+{
+    "name": "express-overview",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon",
+        "production": "pm2 start index.js --name appx-backend"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/elzasimoes/express-overview.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/elzasimoes/express-overview/issues"
+    },
+    "homepage": "https://github.com/elzasimoes/express-overview#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "forever": "^2.0.0",
+        "pm2": "^4.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
