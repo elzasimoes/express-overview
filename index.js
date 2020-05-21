@@ -12,6 +12,30 @@ app.use('/teste', (req, res, next) => {
     next()
 })
 
+app.post('/clientes/relatorio', (req, res) => {
+    res.send(`Cliente relatório: completo = ${req.query.completo} ano: ${req.query.ano}`)
+})
+
+app.post('/corpo', (req, res) => {
+    let corpo = ''
+    req.on('data', function(parte) {
+        corpo += parte
+
+    })
+
+    req.on('end', function() {
+        res.send(corpo)
+
+    })
+})
+
+// : Significa que essa parte pode mudar na URL, que vai ser acessado como parametro
+app.get('/clientes/:id', (req, res) => {
+    //Passar uma função middleware
+    res.send(`Cliente ${req.params.id} selecionado!`)
+})
+
+
 app.get('/teste', (req, res, next) => {
     console.log('Durante')
     res.json({
