@@ -1,15 +1,20 @@
 const express = require('express')
 const saudacao = require('./middleware')
 const bodyParser = require('body-parser')
+const usuarioApi = require('./api/usuario')
 
 const app = express()
 
+
+app.post('/usuario', usuarioApi.salvar)
+app.get('/usuario', usuarioApi.obter)
 
 //Qualquer texto do orpo da requisição será interpretrado
 app.use(bodyParser.text())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(saudacao('Elza'))
+
 
 
 // Função Middleware
