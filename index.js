@@ -77,5 +77,5 @@ app.use('/teste', (req, res) => {
 
 // Startar Express
 app.listen(3000, () => {
-    console.log('Backend rodando ...')
+    console.log('Backend rodando na porta http://localhost:3000/')
 })
