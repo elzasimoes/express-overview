@@ -23,7 +23,7 @@
         "forever": "^2.0.0",
         "forever-monitor": "^2.0.0",
         "node-dev": "^4.0.0",
-        "pm2": "^4.4.0"
+        "pm2": "^5.2.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
